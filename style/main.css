@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    /* padding-top: 50px;  */
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    background-color: rgba(14, 14, 14, .7);
+    /* если картинка не сможет отобразится, будет серый цвет */
+    background-image: url(../img/calc_bg.png);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    padding-top: 5%;
+}
+
+.calc {
+    box-sizing: border-box;
+    width: 1072px;
+    height: 670px;
+    border: 2px solid rgb(239, 174, 2);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.tabs {
+    padding-top: 26px;
+    padding-bottom: 35px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.tab-left,
+.tab-right {
+    width: 220px;
+    height: 70px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 70px;
+    cursor: pointer;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.77) 0%, #323131 100%);
+    color: white;
+    position: relative;
+    transition: .2s;
+}
+
+.tab-left {
+    border-radius: 15px 0 0 0;
+}
+
+.tab-right {
+    border-radius: 0 15px 0 0;
+}
+
+.tab-left:hover, .tab-right:hover{
+    color: rgb(255, 212, 95);
+}
+.active {
+    background-image: none;
+    background-color: rgba(239, 174, 2, 1);
+    color: rgba(0, 0, 0, 1);
+    position: relative;
+}
+
+.active::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(239, 174, 2, 1);
+    bottom: -8px;
+}
+
+.counter {
+    width: 130px;
+    height: 60px;
+    border: 3px solid rgba(239, 174, 2, 1);
+    color: rgba(239, 174, 2, 1);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 72px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.blocks {
+    width: 65%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blocks .blocks-title {
+    color: white;
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.blocks-title::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(239, 174, 2, 1);
+    bottom: -2px;
+}
+
+#pages-block {
+    display: none;
+}
+
+.addiction {
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 50px;
+    color: rgba(239, 174, 2, 1);
+}
+
+.addiction-title {
+    text-align: center;
+}
+
+.addiction-block {
+    text-align: left;
+    padding-left: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.addiction-block__text {
+    padding-left: 20px;
+}
+
+.addiction-block__text::selection{
+    background-color: transparent;
+}
+
+.addiction-label {
+    display: flex;
+    cursor: pointer;
+}
+
+.addiction-label:hover   .container-checkbox input ~ .checkmark {
+    background-color: transparent;
+    border: 2px solid rgba(239, 174, 2, 1);
+  }
+
+.addiction-label:hover  .container-checkbox input:checked ~ .checkmark{
+    background-color: rgba(239, 174, 2, 1);
+}
+
+.total {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 72px;
+}
+
+.total-count{
+    font-family: "Open Sans";
+    font-weight: 700;
+    line-height: 72px;
+    width: 200px;
+    height: 60px;
+    font-size: 56px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgba(239, 174, 2, 1);
+    text-align: right;
+    display: flex;
+    align-items: center;
+}

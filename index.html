@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ukr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/checkbox.css">
+    <title>Calc3Days</title>
+</head>
+
+<body>
+    <div class="calc">
+        <div class="tabs">
+            <div class="tab-left active">Лэндинг</div>
+            <div class="tab-right">Многостраничник</div>
+        </div>
+        <div class="blocks" id="blocks-block">
+            <div class="blocks-title">Количество блоков</div>
+            <input type="number" class="counter" id="counter-block" min="1" max="100">
+        </div>
+        <div class="blocks" id="pages-block">
+            <div class="blocks-title">Количество страниц</div>
+            <input type="number" class="counter" id="counter-pages" min="1" max="200">
+        </div>
+        <div class="blocks">
+            <div class="blocks-title">Сколько часов на проект</div>
+            <input type="number" class="counter" id="counter-hour" min="1" max="1000">
+        </div>
+        <div class="blocks">
+            <div class="blocks-title">Стоимость вашего часа</div>
+            <input type="number" class="counter" id="counter-rate" min="1" max="10000">
+        </div>
+        <div class="addiction">
+            <div class="addiction-title">Дополнительно</div>
+            <div class="addiction-block">
+                <label class="addiction-label">
+                    <label class="container-checkbox">
+                        <input type="checkbox" id="changes-check">
+                        <span class="checkmark"></span>
+                    </label>
+                    <span class="addiction-block__text">Возможность редактировать текст на сайте</span>
+                </label>
+            </div>
+            <div class="addiction-block">
+                <label class="addiction-label">
+                    <label class="container-checkbox">
+                        <input type="checkbox" id="changes-cms">
+                        <span class="checkmark"></span>
+                    </label>
+                    <span class="addiction-block__text">Установка на CMS</span>
+                </label>
+            </div>
+        </div>
+        <div class="total">
+            <span>Общая Стоимость</span>    
+            <input type="text" value="5000" class="total-count" id="total-value" readonly>
+        </div>
+    </div>
+</body>
+
+</html>
